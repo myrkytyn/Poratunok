@@ -50,4 +50,20 @@
         app:layout_constraintTop_toBottomOf="@+id/btnHelp"
         app:layout_constraintVertical_bias="0.502" />
 
+    <TextView
+        android:id="@+id/tvText3"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:gravity="center_horizontal"
+        android:text="Touch one more time!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHelp"
+        app:layout_constraintVertical_bias="0.502" />
+
 </android.support.constraint.ConstraintLayout>
