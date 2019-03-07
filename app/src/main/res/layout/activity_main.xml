@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,63 +7,133 @@
     android:visibility="visible"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/btnHelp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#0000"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/tvText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mrc" />
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Touch to call for help"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHelp" />
+        <ImageButton
+            android:id="@+id/btnHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:visibility="visible"
+            app:srcCompat="@drawable/mrc" />
 
-    <TextView
-        android:id="@+id/tvText2"
-        android:layout_width="wrap_content"
-        android:layout_height="73dp"
-        android:gravity="center_horizontal"
-        android:text="Two more touches needed..."
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHelp"
-        app:layout_constraintVertical_bias="0.502" />
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50sp"
+            android:gravity="center_horizontal"
+            android:text="Натисніть, щоб покликати на допомогу!"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/tvText3"
-        android:layout_width="wrap_content"
-        android:layout_height="73dp"
-        android:gravity="center_horizontal"
-        android:text="Touch one more time!"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHelp"
-        app:layout_constraintVertical_bias="0.502" />
+        <TextView
+            android:id="@+id/tvText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50sp"
+            android:gravity="center_horizontal"
+            android:text="Натисніть ще два рази..."
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50sp"
+            android:gravity="center_horizontal"
+            android:text="Натисніть ще один раз!"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="30sp"
+            android:text="ГОРИ"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="30sp"
+            android:layout_marginRight="30sp"
+            android:text="SMS" />
+
+        <ImageView
+            android:id="@+id/WhiteBarLeft"
+            android:layout_width="80sp"
+            android:layout_height="140sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="160sp"
+            android:layout_marginBottom="50sp"
+            app:srcCompat="@drawable/bar_white" />
+
+        <ImageView
+            android:id="@+id/WhiteBarCenter"
+            android:layout_width="140sp"
+            android:layout_height="80sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="125sp"
+            app:srcCompat="@drawable/bar_white_center" />
+
+        <ImageView
+            android:id="@+id/WhiteBarRight"
+            android:layout_width="80sp"
+            android:layout_height="140sp"
+            android:layout_gravity="right"
+            android:layout_marginTop="160sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="50sp"
+            app:srcCompat="@drawable/bar_white_right" />
+
+        <ImageView
+            android:id="@+id/BlueBarLeft"
+            android:layout_width="80sp"
+            android:layout_height="140sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="160sp"
+            android:layout_marginBottom="50sp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/bar_blue" />
+
+        <ImageView
+            android:id="@+id/BlueBarCenter"
+            android:layout_width="140sp"
+            android:layout_height="80sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="125sp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/bar_blue_center" />
+
+        <ImageView
+            android:id="@+id/BlueBarRight"
+            android:layout_width="80sp"
+            android:layout_height="140sp"
+            android:layout_gravity="right"
+            android:layout_marginTop="160sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="50sp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/bar_blue_right" />
+    </FrameLayout>
+</LinearLayout>
