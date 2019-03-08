@@ -12,15 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/btnHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:visibility="visible"
-            app:srcCompat="@drawable/mrc" />
-
         <TextView
             android:id="@+id/tvText"
             android:layout_width="match_parent"
@@ -28,7 +19,7 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="50sp"
             android:gravity="center_horizontal"
-            android:text="Натисніть, щоб покликати на допомогу!"
+            android:text="Натисніть, щоб викликати рятувальників!"
             android:textColor="#000"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -79,61 +70,94 @@
             android:layout_marginRight="30sp"
             android:text="SMS" />
 
-        <ImageView
-            android:id="@+id/WhiteBarLeft"
-            android:layout_width="80sp"
-            android:layout_height="140sp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="160sp"
-            android:layout_marginBottom="50sp"
-            app:srcCompat="@drawable/bar_white" />
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/WhiteBarCenter"
-            android:layout_width="140sp"
-            android:layout_height="80sp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="125sp"
-            app:srcCompat="@drawable/bar_white_center" />
+            <ImageButton
+                android:id="@+id/btnHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/mrc" />
 
-        <ImageView
-            android:id="@+id/WhiteBarRight"
-            android:layout_width="80sp"
-            android:layout_height="140sp"
-            android:layout_gravity="right"
-            android:layout_marginTop="160sp"
-            android:layout_marginRight="30sp"
-            android:layout_marginBottom="50sp"
-            app:srcCompat="@drawable/bar_white_right" />
+            <ImageView
+                android:id="@+id/WhiteBarLeft"
+                android:layout_width="80sp"
+                android:layout_height="140sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnHelp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.384"
+                app:srcCompat="@drawable/bar_white" />
 
-        <ImageView
-            android:id="@+id/BlueBarLeft"
-            android:layout_width="80sp"
-            android:layout_height="140sp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="160sp"
-            android:layout_marginBottom="50sp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/bar_blue" />
+            <ImageView
+                android:id="@+id/WhiteBarCenter"
+                android:layout_width="140sp"
+                android:layout_height="80sp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/btnHelp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/bar_white_center" />
 
-        <ImageView
-            android:id="@+id/BlueBarCenter"
-            android:layout_width="140sp"
-            android:layout_height="80sp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="125sp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/bar_blue_center" />
+            <ImageView
+                android:id="@+id/WhiteBarRight"
+                android:layout_width="80sp"
+                android:layout_height="140sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnHelp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.384"
+                app:srcCompat="@drawable/bar_white_right" />
 
-        <ImageView
-            android:id="@+id/BlueBarRight"
-            android:layout_width="80sp"
-            android:layout_height="140sp"
-            android:layout_gravity="right"
-            android:layout_marginTop="160sp"
-            android:layout_marginRight="30sp"
-            android:layout_marginBottom="50sp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/bar_blue_right" />
+            <ImageView
+                android:id="@+id/BlueBarLeft"
+                android:layout_width="80sp"
+                android:layout_height="140sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnHelp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.384"
+                app:srcCompat="@drawable/bar_blue" />
+
+            <ImageView
+                android:id="@+id/BlueBarCenter"
+                android:layout_width="140sp"
+                android:layout_height="80sp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/btnHelp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/bar_blue_center" />
+
+            <ImageView
+                android:id="@+id/BlueBarRight"
+                android:layout_width="80sp"
+                android:layout_height="140sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnHelp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.384"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/bar_blue_right" />
+        </android.support.constraint.ConstraintLayout>
     </FrameLayout>
 </LinearLayout>
